@@ -89,25 +89,26 @@ print(Student.corseCount)
  didSet：在新属性值被存储后立即调用。与willSet相同，此时传入的是属性的旧值，默认参数名为oldValue
  willSet与didSet只有在属性第一次被设置时才会调用，在初始化时，不会去调用这些监听方法
  */
-//class Person : NSObject {
-//    var name : String? {
-//        // 可以给newValue自定义名称
-//        willSet { // 属性即将改变,还未改变时会调用的方法
-//            print("111")
-//           print(newValue)
-//        }
-//        didSet {
-//
-//        }
-//    }
-//    var age : Int = 0
-//    var height : Double = 0.0
-//
-//}
-//let p : Person = Person()
-//// 在赋值时,监听该属性的改变
-//p.name = "why"
+/*
+class Person : NSObject {
+    var name : String? {
+        // 可以给newValue自定义名称
+        willSet { // 属性即将改变,还未改变时会调用的方法
+           print("111")
+           print(newValue ?? "hh")
+        }
+        didSet {
 
+        }
+    }
+    var age : Int = 0
+    var height : Double = 0.0
+
+}
+let p : Person = Person()
+// 在赋值时,监听该属性的改变
+p.name = "why"
+*/
 
 
 class StepCounter {
@@ -157,7 +158,6 @@ let dog = Dog()
  很多时候,我们在创建一个对象时就会给属性赋值
  可以自定义构造函数
  注意:如果自定义了构造函数,会覆盖init()方法.即不在有默认的构造函数
- 
  */
 class Dog1: NSObject {
     var name: String

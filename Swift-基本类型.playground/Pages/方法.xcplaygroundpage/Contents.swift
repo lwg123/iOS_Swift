@@ -55,7 +55,7 @@ var somPoint = Point(x: 1.0, y: 1.0)
 somPoint.moveBy(x: 2.0, y: 3.0)
 print("The point is now at (\(somPoint.x), \(somPoint.y))")
 
-// 在常量中不能调用mutating方法
+// 在常量中不能调用mutating方法，下面会出错
 //let fixedPoint = Point(x: 3.0, y: 3.0)
 //fixedPoint.moveBy(x: 2.0, y: 3.0)
 // this will report an error
