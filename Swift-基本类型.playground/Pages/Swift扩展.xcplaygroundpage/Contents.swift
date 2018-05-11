@@ -63,7 +63,6 @@ let centerRect = Rect(center: Point(x: 4.0, y: 4.0),
                       size: Size(with: 3.0, height: 3.0))
 
 // Methods  扩展可以向已有类型添加新的实例方法和类型方法
-
 extension Int {
     func repetitions(task: () -> Void) {
         for _ in 0..<self {

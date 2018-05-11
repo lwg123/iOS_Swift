@@ -16,7 +16,7 @@ class Residence {
 
 let john = Person()
 // 强制解包可能会出错
-//let roomCount = john.residence!.numberOfRooms
+// let roomCount = john.residence!.numberOfRooms
 // 使用自判断方式
 if let roomCount = john.residence?.numberOfRooms {
     print("John's residence has \(roomCount) room(s).")

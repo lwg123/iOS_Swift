@@ -47,7 +47,6 @@ reference3 = nil
 // 打印 “John Appleseed is being deinitialized”
 
 // 类实例间的强引用环 例子
-
 class Person {
     let name: String
     init(name: String) { self.name = name }

@@ -177,6 +177,13 @@ namedMeat.name
 let mysteryMeat = Food()
 mysteryMeat.name
 
+/*
+ 派生类构造方法定义时的编译器安全性检查
+ （1）首先应该将派生类引入的存储属性初始化，然后再向上代理父类的指定构造方法
+ （2）首先调用父类中的指定构造器实现父类中属性的初始化之后，才可以访问父类中的属性
+ （3）在编写便利构造器方法时，首先要调用同类中的其他构造方法，才可以访问任意属性
+ （4）在第一阶段完成之前，不能调用任何实例方法，不能访问父类中定义的任何存储属性，也不能使用self
+ */
 class RecipeIngredient: Food {
     var quantity: Int
     init(name: String, quantity: Int) {
@@ -229,7 +236,7 @@ if anonymousCreature == nil {
 }
 
 // Required Initializers
-// 在类初始化前面加 ’required‘关键字，表面子类必须实现
+// 在类初始化前面加 ’required‘关键字，表明子类必须实现
 class SomeClass {
     required init() {
         // initializer implementation goes here
